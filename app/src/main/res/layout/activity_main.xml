@@ -6,14 +6,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:orientation="vertical"
+        android:padding="16dp">
+        <EditText
+            android:id="@+id/edtTenHocPhan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Tên học phần"
+            android:inputType="text">
+        </EditText>
+        <EditText
+            android:id="@+id/edtDiemQT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Điểm quá trình"
+            android:inputType="numberDecimal">
+        </EditText>
+        <EditText
+            android:id="@+id/edtDiemCK"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Điểm cuối kì"
+            android:inputType="numberDecimal">
+        </EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <Button
+                android:id="@+id/btnKiemTra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kiểm Tra">
+            </Button>
+            <Button
+                android:id="@+id/btnXoa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Xóa">
+            </Button>
+        </LinearLayout>
+            <TextView
+                android:id="@+id/tvKetQua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textSize="18sp"
+                android:textColor="android:color/black">
+                </TextView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
