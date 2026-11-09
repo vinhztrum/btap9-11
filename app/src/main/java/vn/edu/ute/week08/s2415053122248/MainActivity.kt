@@ -95,10 +95,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         private fun phanLoaiKetQua(diemTongKet: Double, diemCK: Double): String {
-            return if (diemTongKet >= 5.0 || diemCK >= 5.0) {
+            return if (diemTongKet < 5.0 || diemCK<3.0) {
+                "Không Đạt"
+            }else if (diemTongKet>=9)
+            {
+                "Đat tốt"
+            }
+            else {
                 "Đạt"
-            } else {
-                "Không đạt"
             }
         }
     }
